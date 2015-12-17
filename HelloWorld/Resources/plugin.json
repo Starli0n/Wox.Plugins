@@ -1,0 +1,12 @@
+{
+  "ID":"366F03411EAA4C9F8CD539344FF23EAD",
+  "ActionKeyword":"hw",
+  "Name":"HW",
+  "Description":"Hello World",
+  "Author":"STH",
+  "Version":"1.0.0",
+  "Language":"csharp",
+  "Website":"",
+  "IcoPath": "Images\\pic.png",
+  "ExecuteFileName":"HelloWorld.dll"
+}
