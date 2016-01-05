@@ -1,0 +1,12 @@
+{
+  "ID":"81792E7D430741289BF10C0CADBAD0DC",
+  "ActionKeyword":"phb",
+  "Name":"Pushbill",
+  "Description":"Push message",
+  "Author":"Starli0n",
+  "Version":"1.0.0",
+  "Language":"csharp",
+  "Website":"",
+  "IcoPath": "Images\\icon.png",
+  "ExecuteFileName":"Pushbill.dll"
+}
