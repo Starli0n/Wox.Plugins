@@ -22,7 +22,8 @@ namespace HelloWorld
             results.Add(new Result
             {
                 Title = "Hello World",
-                SubTitle = "Sinple plugin test",
+                IcoPath = "Images\\pic.png",
+                SubTitle = "Simple plugin test",
                 Action = c =>
                 {
                     try
