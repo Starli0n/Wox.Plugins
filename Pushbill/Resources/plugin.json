@@ -8,5 +8,7 @@
   "Language":"csharp",
   "Website":"",
   "IcoPath": "Images\\icon.png",
-  "ExecuteFileName":"Pushbill.dll"
+  "ExecuteFileName":"Pushbill.dll",
+  "ApiUrl":"enter_api_url",
+  "ApiKey":"enter_api_key"
 }

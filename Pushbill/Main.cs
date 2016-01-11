@@ -9,9 +9,9 @@ namespace Wox.Plugin.Pushbill
 {
     public class Main : IPlugin
     {
-        private const string SendCommand = "send";
-        private const string ListCommand = "list";
-        private const string PushbillApp = "PushbillApp.exe";
+        private const string c_sSendCommand = "send";
+        private const string c_sListCommand = "list";
+        private const string c_sPushbillApp = "PushbillApp.exe";
         private PluginInitContext m_context;
 
         public void Init(PluginInitContext context)
@@ -33,20 +33,20 @@ namespace Wox.Plugin.Pushbill
             string command = query.FirstSearch.ToLower();
             if (string.IsNullOrEmpty(command)) return results;
 
-            if (command == SendCommand)
+            if (command == c_sSendCommand)
             {
                 return ResultForSendMessage(query);
             }
-            if (command == ListCommand)
+            if (command == c_sListCommand)
             {
                 return ResultForListMessages(query);
             }
             
-            if (SendCommand.Contains(command))
+            if (c_sSendCommand.Contains(command))
             {
                 results.Add(ResultForSendCommandAutoComplete(query));
             }
-            if (ListCommand.Contains(command))
+            if (c_sListCommand.Contains(command))
             {
                 results.Add(ResultForListCommandAutoComplete(query));
             }
@@ -56,16 +56,16 @@ namespace Wox.Plugin.Pushbill
 
         private Result ResultForSendCommandAutoComplete(Query query)
         {
-            string title = SendCommand;
+            string title = c_sSendCommand;
             string subtitle = "send <Title> <Message>";
-            return ResultForCommand(query, SendCommand, title, subtitle);
+            return ResultForCommand(query, c_sSendCommand, title, subtitle);
         }
 
         private Result ResultForListCommandAutoComplete(Query query)
         {
-            string title = ListCommand;
+            string title = c_sListCommand;
             string subtitle = "list";
-            return ResultForCommand(query, ListCommand, title, subtitle);
+            return ResultForCommand(query, c_sListCommand, title, subtitle);
         }
 
         private Result ResultForCommand(Query query, string command, string title, string subtitle)
@@ -101,21 +101,13 @@ namespace Wox.Plugin.Pushbill
             else
                 results.Add(new Result
                 {
-                    Title = SendCommand,
+                    Title = c_sSendCommand,
                     SubTitle = "send <Title> <Message>",
                     IcoPath = "Images\\icon.png",
                     Action = c =>
                     {
-                        try
-                        {
-                            Process.Start(PushbillApp);
-                            return true;
-                        }
-                        catch (Exception e)
-                        {
-                            m_context.API.ShowMsg("Error", e.Message, null);
-                            return false;
-                        }
+                        Process.Start(c_sPushbillApp);
+                        return true;
                     }
                 });
 
@@ -126,7 +118,7 @@ namespace Wox.Plugin.Pushbill
         {
             return (new Result
             {
-                Title = SendCommand,
+                Title = c_sSendCommand,
                 SubTitle = "send " + sTitle + " " + sMessage,
                 IcoPath = "Images\\icon.png",
                 Action = c =>
@@ -150,14 +142,14 @@ namespace Wox.Plugin.Pushbill
             List<Result> results = new List<Result>();
             results.Add(new Result
             {
-                Title = ListCommand,
+                Title = c_sListCommand,
                 SubTitle = "list",
                 IcoPath = "Images\\icon.png",
                 Action = c =>
                 {
                     try
                     {
-                        m_context.API.ShowMsg(ListCommand, "list", null);
+                        m_context.API.ShowMsg(c_sListCommand, "list", null);
                         return false;
                     }
                     catch (Exception e)

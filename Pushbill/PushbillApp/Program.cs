@@ -11,18 +11,26 @@ namespace Pushbill
         [STAThread]
         static void Main(string[] args)
         {
-            var options = new Options();
-            CommandLine.Parser.Default.ParseArguments(args, options);
-
-            if (options.NoGui)
+            try
             {
-                PushApi.Send(options.Title, options.Message);
-                return;
-            }
+                var options = new Options();
+                CommandLine.Parser.Default.ParseArguments(args, options);
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PushbillApp(options));
+                if (options.NoGui)
+                {
+                    PushApi.Send(options.Title, options.Message);
+                    return;
+                }
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new PushbillApp(options));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
+            }
+            
         }
     }
 }
