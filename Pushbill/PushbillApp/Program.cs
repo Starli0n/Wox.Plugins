@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace PushbillApp
+namespace Pushbill
 {
     static class Program
     {

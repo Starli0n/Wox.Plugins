@@ -6,9 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pushbill", "Pushbill.csproj", "{5394B2F8-C8BE-48C7-8107-68D470AFC81B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7600C30A-94E9-4857-B496-9D120C6B5220} = {7600C30A-94E9-4857-B496-9D120C6B5220}
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7} = {B2B18AF1-F571-48F8-83BA-41513B48A7E7}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PushbillApp", "PushbillApp\PushbillApp.csproj", "{7600C30A-94E9-4857-B496-9D120C6B5220}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7} = {B2B18AF1-F571-48F8-83BA-41513B48A7E7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PushbillApi", "PushbillApi\PushbillApi.csproj", "{B2B18AF1-F571-48F8-83BA-41513B48A7E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +30,10 @@ Global
 		{7600C30A-94E9-4857-B496-9D120C6B5220}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7600C30A-94E9-4857-B496-9D120C6B5220}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7600C30A-94E9-4857-B496-9D120C6B5220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B18AF1-F571-48F8-83BA-41513B48A7E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace PushbillApp
+namespace Pushbill
 {
     public class Options
     {

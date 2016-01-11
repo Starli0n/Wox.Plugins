@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace PushbillApp
+namespace Pushbill
 {
     public class PushApi
     {
